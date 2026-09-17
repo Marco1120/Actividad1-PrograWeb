@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de operaciones básicas</title>
+        <link rel="stylesheet" href="css/ejercicio16.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.all.min.js"></script>
+        <script src="js/ejercicio16.js"></script>
+    </head>
+
+    <body>
+        <h1>Calculadora de operaciones básicas</h1>
+
+        <label>Número 1: </label>
+        <input type="text" id="num1">
+        <br>
+        <label>Número 2: </label>
+        <input type="text" id="num2">
+        <br>
+        <button onclick="calcularOperacion('suma')">Sumar</button>
+        <button onclick="calcularOperacion('resta')">Restar</button>
+        <button onclick="calcularOperacion('multiplicacion')">Multiplicar</button>
+        <button onclick="calcularOperacion('division')">Dividir</button>
+        <br>
+        <label>Resultado: </label>
+        <input type="text" id="resultado" readonly>
+    </body>
+</html>

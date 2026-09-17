@@ -1,19 +1,16 @@
-const btnConvertir = document.getElementById('btnConvertir');
-const celsiusInput = document.getElementById('celsius');
-const fahrenheitInput = document.getElementById('fahrenheit');
-const mensajeError = document.getElementById('mensajeError');
+function convertir() {
+    //Obtiene el valor del elemento con id celsius
+    var celsius = document.getElementById("celsius").value;
 
-btnConvertir.addEventListener('click', function () {
-    const valorCelsius = celsiusInput.value.trim();
-
-    if (valorCelsius === '' || isNaN(valorCelsius)) {
-        mensajeError.style.display = 'block';
-        fahrenheitInput.value = '';
+    //Valida que el campo no este vacio y que sea numerico
+    if (celsius === "" || isNaN(celsius)) {
+        document.getElementById("resultado").value = "";
         return;
     }
 
-    mensajeError.style.display = 'none';
-    const celsius = parseFloat(valorCelsius);
-    const fahrenheit = (celsius * 9 / 5) + 32;
-    fahrenheitInput.value = fahrenheit.toFixed(2) + '°F';
-});
+    //Convierte el valor a Fahrenheit
+    var fahrenheit = (parseFloat(celsius) * 9 / 5) + 32;
+
+    //Muestra el resultado en el elemento con id resultado
+    document.getElementById("resultado").value = fahrenheit.toFixed(2) + "°F";
+}
